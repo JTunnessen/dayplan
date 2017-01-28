@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Stories</h1>
-
-<table>
+<div class="table-responsive">
+<table class="table table-hover">
   <thead>
     <tr>
       <th>Slug</th>
@@ -13,13 +13,12 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @stories.each do |story| %>
       <tr>
-        <td><%= story.slug %></td>
-        <td><%= story.description %></td>
-        <td><%= story.reporter %></td>
+        <td><strong><%= story.slug %></strong></td>
+        <td><%= truncate(story.description, length: 100) %></td>
+        <td><strong><%= story.reporter %></strong></td>
         <td><%= story.deadline %></td>
         <td><%= story.date %></td>
         <td><%= link_to 'Show', story %></td>
@@ -29,7 +28,7 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to 'New Story', new_story_path %>
+<%= link_to 'New Story', new_story_path, class: "btn btn-primary" %>
