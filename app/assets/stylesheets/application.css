@@ -15,3 +15,9 @@
  *= require_tree .
  *= require_self
  */
+
+.container_signin {
+    max-width: 500px;
+    position: absolute;
+    margin: auto;
+}
