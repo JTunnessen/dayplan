@@ -37,6 +37,8 @@ gem 'bootstrap_jt'
 # gem 'capistrano-rails', group: :development
 # Authentication
 gem 'devise'
+# Search Capability
+gem 'ransack'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

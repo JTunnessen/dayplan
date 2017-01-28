@@ -1,5 +1,13 @@
 <p id="notice"><%= notice %></p>
-
+<form role="search" class="form-inline">
+        <div class="form-group">
+          <%= search_form_for @q, url: stories_path, html: { method: :post } do |f| %>
+         <span><input type="text" class="form-control" placeholder="Search Episodes" <%= f.search_field :slug_cont %>
+          </span>
+        <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+        <% end %>
+      </form>
 <h1>Upcoming Stories</h1>
 <div class="table-responsive">
 <table class="table table-hover">

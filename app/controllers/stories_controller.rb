@@ -5,7 +5,9 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
   def index
-    @stories = Story.all
+    # @stories = Story.all
+    @q = Story.ransack(params[:q])
+    @stories = @q.result(distinct: true)
   end
 
   # GET /stories/1
