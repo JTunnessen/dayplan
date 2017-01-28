@@ -8,12 +8,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Story Release Planner <i class="fa fa-file-text-o" aria-hidden="true"></i></a>
+      <a class="navbar-brand" href="/">Story Release Planner  <i class="fa fa-globe" aria-hidden="true"></i> <i class="fa fa-newspaper-o" aria-hidden="true"></i> <i class="fa fa-video-camera" aria-hidden="true"></i></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav pull-right">
+        <li><a href="/stories/new" class="stories"><i class="fa fa-file-text" aria-hidden="true"></i> New Story</a></li>
+        <li><%= link_to " New Story", new_story_path, :class => 'btn btn-danger' %></li>
           <li class="divider"></li>
 
               <% if user_signed_in? %>
