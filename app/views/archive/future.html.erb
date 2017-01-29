@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+<div class="col-md-12">
+<form role="search" class="form-inline">
+        <div class="form-group">
+          <%= search_form_for @q, url: stories_path, html: { method: :post } do |f| %>
+         <span><input type="text" class="form-control" placeholder="Search" <%= f.search_field :slug_or_reporter_cont %>
+          </span>
+        <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+        <% end %>
+      </form>
+  </div><!-- col -->
+  </div><!-- row -->
+<h1>Future Stories</h1>
+<div class="table-responsive">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Slug</th>
+      <th>Description</th>
+      <th>Reporter</th>
+      <th><%= sort_link(@q, :deadline, 'Deadline') %></th>
+      <th><%= sort_link(@q, :date, 'Date') %></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @stories.each do |story| %>
+    <% if (story.date > Date.today) %>
+      <tr>
+        <td><strong><%= story.slug %></strong></td>
+        <td><%= truncate(story.description, length: 100) %></td>
+        <td><strong><%= story.reporter %></strong></td>
+        <td><%= story.deadline %></td>
+        <td><%= story.date %></td>
+        <td><%= link_to 'Show', story %></td>
+        <td><%= link_to 'Edit', edit_story_path(story) %></td>
+        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+</div>
+<br>
