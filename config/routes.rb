@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'editors/index'
+
   get 'archive/index'
   get 'archive/future'
   get 'archive/list'
