@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'archive/index'
   get 'archive/future'
+  get 'archive/list'
 
   devise_for :users
   resources :stories
