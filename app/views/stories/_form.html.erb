@@ -11,26 +11,22 @@
     </div>
   <% end %>
 
+  <input type="text" class="form-control" placeholder="Slug"
+    <%= f.text_field :slug, autofocus: true %></input>
+  <br>
+  <input type="text" class="form-control" placeholder="Description"
+    <%= f.text_field :description %></input>
+  <br>
+  <input type="text" class="form-control" placeholder="Reporter"
+    <%= f.text_field :reporter %></input>
+  <br>
+  <input type="text" class="form-control" placeholder="Deadline"
+    <%= f.text_field :deadline %></input>
+  <br>
   <div class="field">
-    <%= f.label :slug %>
-    <%= f.text_field :slug %>
+      <%= f.label :deadline %><br>
+      <%= f.select(:deadline, options_for_select(deadline, "AM")) %>
   </div>
-
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :reporter %>
-    <%= f.text_field :reporter %>
-  </div>
-
-  <div class="field">
-    <%= f.label :deadline %>
-    <%= f.text_field :deadline %>
-  </div>
-
   <div class="field">
     <%= f.label :date %>
     <%= f.date_select :date %>

@@ -29,14 +29,13 @@
     <% @stories.each do |story| %>
     <% if (story.date < Date.today) %>
       <tr>
-        <td><strong><%= story.slug %></strong></td>
+        <td><strong><%= link_to story.slug, story %></strong></td>
         <td><%= truncate(story.description, length: 100) %></td>
         <td><strong><%= story.reporter %></strong></td>
         <td><%= story.deadline %></td>
         <td><%= story.date %></td>
-        <td><%= link_to 'Show', story %></td>
-        <td><%= link_to 'Edit', edit_story_path(story) %></td>
-        <td><%= link_to 'Destroy', story, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '', edit_story_path(story), class: "fa fa-pencil-square-o fa-lg" %> | 
+        <%= link_to '', story, class: "fa fa-trash fa-lg", method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
       <% end %>
     <% end %>
