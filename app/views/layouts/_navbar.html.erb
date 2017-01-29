@@ -8,21 +8,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Story Release Planner  <i class="fa fa-globe" aria-hidden="true"></i> <i class="fa fa-newspaper-o" aria-hidden="true"></i> <i class="fa fa-video-camera" aria-hidden="true"></i></a>
+      <a class="navbar-brand" href="/">Story Release Planner  <i class="fa fa-globe fa-lg" aria-hidden="true"></i> <i class="fa fa-newspaper-o fa-lg" aria-hidden="true"></i> <i class="fa fa-video-camera fa-lg" aria-hidden="true"></i></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav pull-right">
-        <li><a href="/stories/new" class="stories"><i class="fa fa-file-text" aria-hidden="true"></i> New Story</a></li>
-        <li><a href="/"><i class="fa fa-clock-o" aria-hidden="true"></i> Today</a></li>
-        <li><a href="/archive/future" class="archive"><i class="fa fa-calendar" aria-hidden="true"></i> Upcoming</a></li>
-        <li><a href="/archive/index" class="archive"><i class="fa fa-archive" aria-hidden="true"></i> Archive</a></li>
+        <li><a href="/stories/new" class="stories"><i class="fa fa-file-text-o fa-lg"></i> New Story</a></li>
+        <li><a href="/"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Today</a></li>
+        <li><a href="/archive/future" class="archive"><i class="fa fa-calendar fa-lg" aria-hidden="true"></i> Upcoming</a></li>
+        <li><a href="/archive/index" class="archive"><i class="fa fa-archive fa-lg" aria-hidden="true"></i> Archive</a></li>
           <li class="divider"></li>
 
               <% if user_signed_in? %>
 
-                <li class='login'><%= link_to "  #{current_user.email}", edit_user_registration_path, class: "fa fa-user" %>
+                <li class='login'><%= link_to "  #{current_user.email}", edit_user_registration_path, class: "fa fa-user fa-lg" %>
                 </li>
                 <li class="divider"></li>
                 <li>
