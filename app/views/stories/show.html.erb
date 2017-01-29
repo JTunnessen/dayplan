@@ -1,29 +1,20 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Slug:</strong>
-  <%= @story.slug %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @story.description %>
-</p>
-
-<p>
-  <strong>Reporter:</strong>
-  <%= @story.reporter %>
-</p>
-
-<p>
-  <strong>Deadline:</strong>
-  <%= @story.deadline %>
-</p>
-
-<p>
-  <strong>Date:</strong>
-  <%= @story.date %>
-</p>
+<% @page_feature = "Non-Search" %>
+  <div class="row text-center">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h1><strong><%= @story.slug %></strong></h1>
+          <h3 class="text-danger">Deadline: <strong><%= @story.date.strftime("%B %-d, %Y") %> <%= @story.deadline %></strong></h3>
+          <h3>Reporter: <strong><%= @story.reporter %></strong></h3>
+        </div>
+        <div class="panel-body">
+          <p>
+            <%= @story.description %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 <%= link_to 'Edit', edit_story_path(@story) %> |
 <%= link_to 'Back', stories_path %>

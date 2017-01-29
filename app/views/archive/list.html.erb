@@ -1,21 +1,12 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
 <div class="col-md-12">
-<form role="search" class="form-inline">
-        <div class="form-group">
-          <%= search_form_for @q, url: stories_path, html: { method: :post } do |f| %>
-         <span><input type="text" class="form-control" placeholder="Search" <%= f.search_field :slug_or_reporter_cont %>
-          </span>
-        <button type="submit" class="btn btn-danger">Submit</button>
-        </div>
-        <% end %>
-      </form>
-  </div><!-- col -->
-  </div><!-- row -->
-<p>
-<a href="archive/list" class="archive"><i class="fa fa-list" aria-hidden="true"></i></a> | 
-<a href="/" class="archive"><i class="fa fa-filter" aria-hidden="true"></i></a>
-</p>
+<span class="pull-right">
+<a href="archive/list" class="archive" data-toggle="tooltip" data-placement="top" title="List View"><i class="fa fa-list" aria-hidden="true"></i></a> | 
+<a href="/" class="archive"><i class="fa fa-filter" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Segmented View"></i></a>
+</span>
+</div><!-- col -->
+</div><!-- row -->
 <h1>Upcoming Stories</h1>
 <div class="table-responsive">
 <table class="table table-hover">
@@ -47,3 +38,10 @@
 </table>
 </div>
 <br>
+
+<!-- tooltip -->
+<script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>

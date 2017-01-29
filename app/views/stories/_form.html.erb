@@ -1,3 +1,4 @@
+<% @page_feature = "Non-Search" %>
 <%= form_for(story) do |f| %>
   <% if story.errors.any? %>
     <div id="error_explanation">
@@ -31,6 +32,6 @@
   </div>
   <br>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Add this Story", class: "btn btn-info" %>
   </div>
 <% end %>

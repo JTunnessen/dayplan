@@ -1,4 +1,4 @@
-<nav class="navbar-static-top navbar-inverse">
+<nav class="navbar-fixed-top navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -13,6 +13,17 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <% if user_signed_in? && @page_feature != "Non-Search" %>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <%= search_form_for @q, url: stories_path, html: { method: :post } do |f| %>
+         <span><input type="text" class="form-control" placeholder="Search" <%= f.search_field :slug_or_reporter_cont %>
+          </span>
+        <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+        <% end %>
+      </form>
+      <% end %>
       <ul class="nav navbar-nav pull-right">
         <li><a href="/stories/new" class="stories"><i class="fa fa-file-text-o fa-lg"></i> New Story</a></li>
         <li><a href="/"><i class="fa fa-clock-o fa-lg" aria-hidden="true"></i> Today</a></li>
