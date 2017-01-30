@@ -1,9 +1,12 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
 <div class="col-md-12">
+<span class="pull-left">
+<%= Time.now.strftime("%B %-d, %Y %H:%M") %> <%= Time.zone %>
+</span>
 <span class="pull-right">
-<a href="archive/list" class="archive" data-toggle="tooltip" data-placement="top" title="List View"><i class="fa fa-list" aria-hidden="true"></i></a> | 
-<a href="/" class="archive"><i class="fa fa-filter" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Segmented View"></i></a>
+<a href="/" class="archive"><i class="fa fa-filter" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Segmented View"></i></a> | 
+<a href="archive/list" class="archive" data-toggle="tooltip" data-placement="top" title="List View"><i class="fa fa-list" aria-hidden="true"></i></a>
 </span>
 </div><!-- col -->
 </div><!-- row -->

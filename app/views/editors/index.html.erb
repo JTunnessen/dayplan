@@ -6,7 +6,7 @@
 </div>
 </div>
 <div class="row">
-<div class="col-lg-9 col-md-8 col-sm-12" id="main">
+<div class="col-md-12" id="main">
           <div class="table-responsive">
             <table class="table table-hover">
               <thead>
@@ -27,7 +27,6 @@
                     <td><%= user.sign_in_count %></td>
                     <td><%= user.created_at.strftime("%B %-d, %Y") %></td>
                     <td><%= user.last_sign_in_at.strftime("%H:%M %B %-d, %Y") %></td>
-
                   </tr>
                 <% end %>
               </tbody>

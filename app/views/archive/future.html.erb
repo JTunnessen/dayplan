@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
 <div class="col-md-12">
-  </div><!-- col -->
-  </div><!-- row -->
+<span class="pull-left">
+<%= Time.now.strftime("%B %-d, %Y %H:%M") %> <%= Time.zone %>
+</span>
+<span class="pull-right text-primary">** You can sort the Upcoming Story list by clicking on Slug, Reporter, Deadline, or Date</span>
+</div><!-- col -->
+</div><!-- row -->
 <h1>Upcoming Stories</h1>
 <div class="table-responsive">
 <table class="table table-hover">

@@ -11,14 +11,15 @@
       </ul>
     </div>
   <% end %>
+  <div>Please enter your story information in English.</div><br>
 
   <input type="text" class="form-control" placeholder="Slug"
     <%= f.text_field :slug, autofocus: true %></input>
   <br>
-  <input type="text" class="form-control" placeholder="Description"
-    <%= f.text_field :description %></input>
+  <textarea class="form-control" placeholder="Story Description"
+    <%= f.text_field :description %></textarea>
   <br>
-  <input type="text" class="form-control" placeholder="Reporter"
+  <input type="text" class="form-control" placeholder="Reporter Name"
     <%= f.text_field :reporter %></input>
   <br>
   <div class="field">

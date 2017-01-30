@@ -1,8 +1,13 @@
 <p id="notice"><%= notice %></p>
 <div class="row">
 <div class="col-md-12">
-  </div><!-- col -->
-  </div><!-- row -->
+<span class="pull-left">
+<%= Time.now.strftime("%B %-d, %Y %H:%M") %> <%= Time.zone %>
+</span>
+<span class="pull-right text-primary">** You can sort the Archive by clicking on Slug, Reporter, Deadline, or Date</span>
+</div>
+</div><!-- col -->
+</div><!-- row -->
 <h1>Archive</h1>
 <div class="table-responsive">
 <table class="table table-hover">
@@ -21,7 +26,7 @@
     <% if (story.date < Date.today) %>
       <tr>
         <td><strong><%= link_to story.slug, story %></strong></td>
-        <td><%= truncate(story.description, length: 100) %></td>
+        <td><%= truncate(story.description, length: 50) %></td>
         <td><strong><%= story.reporter %></strong></td>
         <td><%= story.deadline %></td>
         <td><%= story.date %></td>
